@@ -31,6 +31,7 @@
         .text-primary-red { color: #c91414; }
         .hover\:bg-red-800:hover { background-color: #991b1b; }
         .hover\:text-primary-red:hover { color: #c91414; }
+        .agent-carousel { transition: transform 0.5s ease-in-out; }
     </style>
 </head>
 <body class="overflow-x-hidden">
@@ -731,27 +732,72 @@
             </div>
             
             <div class="w-full md:w-1/2 flex justify-center md:justify-end">
-                <div class="flex gap-4 relative">
-                    <!-- Agent 1 -->
-                    <div class="w-48 md:w-56 bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 relative">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&h=600&fit=crop" class="w-full h-64 md:h-72 object-cover">
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
-                            <div class="font-bold">Maria Garcia</div>
-                            <div class="text-xs text-gray-300 mb-2">Senior Agent</div>
-                            <div class="inline-block bg-primary-red text-white text-[10px] px-2 py-0.5 rounded">Se Habla Español</div>
+                <div class="relative w-full max-w-lg overflow-hidden">
+                    <div class="flex gap-4 agent-carousel" id="agentCarousel">
+                        <!-- Agent 1 -->
+                        <div class="w-48 md:w-56 bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 flex-shrink-0 relative">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&h=600&fit=crop" class="w-full h-64 md:h-72 object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
+                                <div class="font-bold">Maria Garcia</div>
+                                <div class="text-xs text-gray-300 mb-2">Senior Agent</div>
+                                <div class="inline-block bg-primary-red text-white text-[10px] px-2 py-0.5 rounded">Se Habla Español</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Agent 2 -->
+                        <div class="w-48 md:w-56 bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 flex-shrink-0 relative">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&h=600&fit=crop" class="w-full h-64 md:h-72 object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
+                                <div class="font-bold">David Chen</div>
+                                <div class="text-xs text-gray-300 mb-2">Commercial Specialist</div>
+                                <div class="flex gap-1 text-yellow-400 text-xs">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Agent 3 -->
+                        <div class="w-48 md:w-56 bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 flex-shrink-0 relative">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&h=600&fit=crop" class="w-full h-64 md:h-72 object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
+                                <div class="font-bold">Sarah Johnson</div>
+                                <div class="text-xs text-gray-300 mb-2">Home Insurance Expert</div>
+                                <div class="inline-block bg-green-600 text-white text-[10px] px-2 py-0.5 rounded">Top Performer</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Agent 4 -->
+                        <div class="w-48 md:w-56 bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 flex-shrink-0 relative">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=600&fit=crop" class="w-full h-64 md:h-72 object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
+                                <div class="font-bold">Michael Torres</div>
+                                <div class="text-xs text-gray-300 mb-2">Claims Manager</div>
+                                <div class="flex gap-1 text-yellow-400 text-xs">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Agent 5 -->
+                        <div class="w-48 md:w-56 bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 flex-shrink-0 relative">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=600&fit=crop" class="w-full h-64 md:h-72 object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
+                                <div class="font-bold">Emily Williams</div>
+                                <div class="text-xs text-gray-300 mb-2">Life Insurance Specialist</div>
+                                <div class="inline-block bg-primary-red text-white text-[10px] px-2 py-0.5 rounded">Se Habla Español</div>
+                            </div>
                         </div>
                     </div>
                     
-                    <!-- Agent 2 -->
-                    <div class="w-48 md:w-56 bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 relative mt-8">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&h=600&fit=crop" class="w-full h-64 md:h-72 object-cover">
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
-                            <div class="font-bold">David Chen</div>
-                            <div class="text-xs text-gray-300 mb-2">Commercial Specialist</div>
-                            <div class="flex gap-1 text-yellow-400 text-xs">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                        </div>
+                    <!-- Carousel Controls -->
+                    <div class="flex justify-center mt-6 gap-4">
+                        <button onclick="moveCarousel(-1)" class="w-10 h-10 rounded-full border-2 border-primary-red text-primary-red hover:bg-primary-red hover:text-white transition flex items-center justify-center">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="flex gap-2 items-center" id="carouselDots"></div>
+                        <button onclick="moveCarousel(1)" class="w-10 h-10 rounded-full border-2 border-primary-red text-primary-red hover:bg-primary-red hover:text-white transition flex items-center justify-center">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -1309,6 +1355,50 @@
         </div>
     </div>
 </footer>
+
+<script>
+// Agent Carousel
+let currentSlide = 0;
+const carousel = document.getElementById('agentCarousel');
+const dotsContainer = document.getElementById('carouselDots');
+const cards = carousel ? carousel.querySelectorAll('div[class*="w-48"]') : [];
+const visibleCards = 2;
+const totalSlides = Math.max(0, cards.length - visibleCards);
+
+function updateCarousel() {
+    if (!carousel) return;
+    const cardWidth = cards[0] ? cards[0].offsetWidth + 16 : 0;
+    carousel.style.transform = `translateX(-${currentSlide * cardWidth}px)`;
+    
+    dotsContainer.innerHTML = '';
+    for (let i = 0; i <= totalSlides; i++) {
+        const dot = document.createElement('div');
+        dot.className = `w-2 h-2 rounded-full cursor-pointer transition ${i === currentSlide ? 'bg-primary-red' : 'bg-gray-300'}`;
+        dot.onclick = () => { currentSlide = i; updateCarousel(); };
+        dotsContainer.appendChild(dot);
+    }
+}
+
+function moveCarousel(direction) {
+    if (totalSlides === 0) return;
+    currentSlide = (currentSlide + direction + totalSlides + 1) % (totalSlides + 1);
+    updateCarousel();
+}
+
+let autoSlide = setInterval(() => moveCarousel(1), 4000);
+
+const carouselSection = document.getElementById('agentCarousel');
+if (carouselSection) {
+    carouselSection.addEventListener('mouseenter', () => clearInterval(autoSlide));
+    carouselSection.addEventListener('mouseleave', () => { autoSlide = setInterval(() => moveCarousel(1), 4000); });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    updateCarousel();
+});
+
+window.addEventListener('resize', updateCarousel);
+</script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
