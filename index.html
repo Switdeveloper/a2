@@ -140,15 +140,21 @@
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             <div class="flex flex-col items-center">
-                <div class="text-5xl md:text-6xl font-bold text-yellow-500 mb-3 font-serif drop-shadow-md">100+</div>
+                <div class="text-5xl md:text-6xl font-bold text-yellow-500 mb-3 font-serif drop-shadow-md">
+                    <span class="counter" data-target="100" data-suffix="+">0</span>
+                </div>
                 <div class="text-xs md:text-sm font-bold tracking-widest uppercase text-gray-300">Locations Statewide</div>
             </div>
             <div class="flex flex-col items-center">
-                <div class="text-5xl md:text-6xl font-bold text-yellow-500 mb-3 font-serif drop-shadow-md">$500M+</div>
+                <div class="text-5xl md:text-6xl font-bold text-yellow-500 mb-3 font-serif drop-shadow-md">
+                    $<span class="counter" data-target="500" data-prefix="$" data-suffix="M+">0</span>
+                </div>
                 <div class="text-xs md:text-sm font-bold tracking-widest uppercase text-gray-300">In Premium Written</div>
             </div>
             <div class="flex flex-col items-center">
-                <div class="text-5xl md:text-6xl font-bold text-yellow-500 mb-3 font-serif drop-shadow-md">300K+</div>
+                <div class="text-5xl md:text-6xl font-bold text-yellow-500 mb-3 font-serif drop-shadow-md">
+                    <span class="counter" data-target="300" data-suffix="K+">0</span>
+                </div>
                 <div class="text-xs md:text-sm font-bold tracking-widest uppercase text-gray-300">Policies Written</div>
             </div>
             <div class="flex flex-col items-center justify-center">
@@ -1303,6 +1309,45 @@
         </div>
     </div>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+    
+    const animateCounters = () => {
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            const prefix = counter.getAttribute('data-prefix') || '';
+            const suffix = counter.getAttribute('data-suffix') || '';
+            const count = +counter.innerText;
+            
+            const increment = target / speed;
+            
+            if (count < target) {
+                counter.innerText = prefix + Math.ceil(count + increment) + suffix;
+                setTimeout(animateCounters, 20);
+            } else {
+                counter.innerText = prefix + target + suffix;
+            }
+        });
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounters();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    const statsSection = document.querySelector('.counter').closest('section');
+    if (statsSection) {
+        observer.observe(statsSection);
+    }
+});
+</script>
 
 </body>
 </html>
