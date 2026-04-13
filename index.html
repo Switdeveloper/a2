@@ -54,16 +54,23 @@
         #reviewsCarousel::-webkit-scrollbar { display: none; }
         #reviewsCarousel { -ms-overflow-style: none; scrollbar-width: none; }
         
-        /* Auto scroll animation */
-        @keyframes carouselScroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(calc(-380px * 6)); }
-        }
+        /* Infinite scroll animation - 4 reviews, card width 320px + 24px gap = 344px */
         #reviewsCarousel {
-            animation: carouselScroll 24s linear infinite;
+            display: flex;
+            width: max-content;
+            animation: scrollLeft 16s linear infinite;
         }
         #reviewsCarousel:hover {
             animation-play-state: paused;
+        }
+        @keyframes scrollLeft {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-1376px); }
+        }
+        
+        .carousel-wrapper {
+            overflow: hidden;
+            width: 100%;
         }
     </style>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -899,9 +906,10 @@
             Thousands of satisfied customers across Florida have made the switch. See why they consistently recommend us to family and friends.
         </p>
         
-        <div id="reviewsCarousel" class="flex gap-6 overflow-x-auto pb-4 scroll-smooth" style="scroll-behavior: smooth;">
+        <div class="carousel-wrapper">
+            <div id="reviewsCarousel"> class="flex gap-6 overflow-hidden pb-4" style="width: 100%;">
             <!-- Review 1 -->
-            <div class="min-w-[300px] md:min-w-[350px] bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+            <div class="review-card min-w-[280px] md:min-w-[320px] bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
                 <div>
                     <div class="flex text-yellow-400 mb-4 text-sm">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -920,7 +928,7 @@
             </div>
             
             <!-- Review 2 -->
-            <div class="min-w-[300px] md:min-w-[350px] bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+            <div class="review-card min-w-[280px] md:min-w-[320px] bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
                 <div>
                     <div class="flex text-yellow-400 mb-4 text-sm">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -939,7 +947,7 @@
             </div>
             
             <!-- Review 3 -->
-            <div class="min-w-[300px] md:min-w-[350px] bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+            <div class="review-card min-w-[280px] md:min-w-[320px] bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
                 <div>
                     <div class="flex text-yellow-400 mb-4 text-sm">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -958,7 +966,7 @@
             </div>
             
             <!-- Review 4 -->
-            <div class="min-w-[300px] md:min-w-[350px] bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+            <div class="review-card min-w-[280px] md:min-w-[320px] bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
                 <div>
                     <div class="flex text-yellow-400 mb-4 text-sm">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -975,44 +983,7 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Review 5 -->
-            <div class="min-w-[300px] md:min-w-[350px] bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
-                <div>
-                    <div class="flex text-yellow-400 mb-4 text-sm">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-gray-600 text-sm italic mb-6">
-                        "When my roof was damaged in a storm, they handled the claim incredibly fast. So grateful to have an agency that actually cares."
-                    </p>
-                </div>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-dark-blue rounded-full flex items-center justify-center text-white font-bold">DB</div>
-                    <div>
-                        <div class="font-bold text-sm">David Brown</div>
-                        <div class="text-xs text-gray-400">Fort Myers, FL - 2 months ago</div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Review 6 -->
-            <div class="min-w-[300px] md:min-w-[350px] bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
-                <div>
-                    <div class="flex text-yellow-400 mb-4 text-sm">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-gray-600 text-sm italic mb-6">
-                        "I bundled my auto and home insurance and couldn't be happier with the savings. Highly recommend getting a quote from them!"
-                    </p>
-                </div>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-dark-blue rounded-full flex items-center justify-center text-white font-bold">ST</div>
-                    <div>
-                        <div class="font-bold text-sm">Sarah Taylor</div>
-                        <div class="text-xs text-gray-400">Sarasota, FL - 3 months ago</div>
-                    </div>
-                </div>
-            </div>
+        </div>
         </div>
         
         <div class="flex justify-center gap-4 mt-8">
