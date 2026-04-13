@@ -22,61 +22,9 @@
 </head>
 <body class="overflow-x-hidden">
 
-<header class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-        <a href="index.html" class="flex items-center">
-            <div class="w-10 h-10 bg-gray-200 flex items-center justify-center mr-2 border border-gray-300">
-                <span class="text-xs font-bold text-gray-500">LOGO</span>
-            </div>
-            <span class="font-bold text-lg serif text-dark-blue">FreedmanBrokerInsurance</span>
-        </a>
+    <div id="header-container"></div>
 
-        <nav class="hidden md:flex space-x-6">
-            <a href="services.html" class="text-sm font-semibold text-gray-800 hover:text-primary-red flex items-center">Services <i class="fas fa-chevron-down ml-1 text-[10px] text-gray-400"></i></a>
-            <a href="auto-insurance.html" class="text-sm font-semibold text-gray-800 hover:text-primary-red">Auto Insurance</a>
-            <a href="home-insurance.html" class="text-sm font-semibold text-primary-red">Home Insurance</a>
-            <a href="life-insurance.html" class="text-sm font-semibold text-gray-800 hover:text-primary-red">Life Insurance</a>
-            <a href="business-insurance.html" class="text-sm font-semibold text-gray-800 hover:text-primary-red">Business Insurance</a>
-            <a href="about.html" class="text-sm font-semibold text-gray-800 hover:text-primary-red">About Us</a>
-            <a href="locations.html" class="text-sm font-semibold text-gray-800 hover:text-primary-red">Locations</a>
-            <a href="contact.html" class="text-sm font-semibold text-gray-800 hover:text-primary-red">Contact</a>
-        </nav>
-
-        <div class="hidden md:flex items-center space-x-6">
-            <div class="flex items-center text-sm font-bold text-dark-blue">
-                <i class="fas fa-phone-alt text-primary-red mr-2"></i> 1-727-230-1000
-            </div>
-            <a href="contact.html" class="bg-primary-red text-white px-5 py-2.5 rounded font-bold text-sm hover:bg-red-800 transition">Get a Quote</a>
-        </div>
-
-        <button id="mobileMenuBtn" class="md:hidden text-gray-800 text-xl">
-            <i class="fas fa-bars"></i>
-        </button>
-    </div>
-    
-    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg">
-        <div class="px-4 py-6 space-y-4">
-            <a href="index.html" class="block text-sm font-semibold text-gray-800 hover:text-primary-red">Home</a>
-            <a href="services.html" class="block text-sm font-semibold text-gray-800 hover:text-primary-red">Services</a>
-            <a href="auto-insurance.html" class="block text-sm font-semibold text-gray-800 hover:text-primary-red">Auto Insurance</a>
-            <a href="home-insurance.html" class="block text-sm font-semibold text-primary-red">Home Insurance</a>
-            <a href="life-insurance.html" class="text-sm font-semibold text-gray-800 hover:text-primary-red">Life Insurance</a>
-            <a href="business-insurance.html" class="text-sm font-semibold text-gray-800 hover:text-primary-red">Business Insurance</a>
-            <a href="about.html" class="block text-sm font-semibold text-gray-800 hover:text-primary-red">About Us</a>
-            <a href="locations.html" class="block text-sm font-semibold text-gray-800 hover:text-primary-red">Locations</a>
-            <a href="faq.html" class="block text-sm font-semibold text-gray-800 hover:text-primary-red">FAQ</a>
-            <a href="contact.html" class="block text-sm font-semibold text-gray-800 hover:text-primary-red">Contact</a>
-            <div class="pt-4 border-t border-gray-200">
-                <a href="tel:17272301000" class="flex items-center text-sm font-bold text-dark-blue mb-3">
-                    <i class="fas fa-phone-alt text-primary-red mr-2"></i> 1-727-230-1000
-                </a>
-                <a href="contact.html" class="block w-full text-center bg-primary-red text-white px-5 py-3 rounded font-bold text-sm">Get a Quote</a>
-            </div>
-        </div>
-    </div>
-</header>
-
-<section class="relative bg-gray-100 pt-16 pb-32 overflow-hidden">
+    <section class="relative bg-gray-100 pt-16 pb-32 overflow-hidden">
     <!-- Background image placeholder (House) -->
     <div class="absolute inset-0 z-0">
         <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="House Background" class="w-full h-full object-cover object-center">
@@ -1289,5 +1237,6 @@ if (mobileMenuBtn && mobileMenu) {
 }
 </script>
 
+    <div id="footer-container"></div>
 </body>
 </html>
