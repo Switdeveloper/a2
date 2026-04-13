@@ -32,6 +32,27 @@
         .hover\:bg-red-800:hover { background-color: #991b1b; }
         .hover\:text-primary-red:hover { color: #c91414; }
         .agent-carousel { transition: transform 0.5s ease-in-out; }
+        
+        /* Awards Section Animation */
+        @keyframes slideLeftRight {
+            0% { transform: translateX(-100px); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+        .awards-animate .grid > div {
+            animation: slideLeftRight 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        .awards-animate .grid > div:nth-child(1) { animation-delay: 0.1s; }
+        .awards-animate .grid > div:nth-child(2) { animation-delay: 0.2s; }
+        .awards-animate .grid > div:nth-child(3) { animation-delay: 0.3s; }
+        .awards-animate .grid > div:nth-child(4) { animation-delay: 0.4s; }
+        .awards-animate .grid > div:nth-child(5) { animation-delay: 0.5s; }
+        .awards-animate .grid > div:nth-child(6) { animation-delay: 0.6s; }
+        .awards-animate .grid > div:nth-child(7) { animation-delay: 0.7s; }
+        
+        /* Hide scrollbar for carousel */
+        #reviewsCarousel::-webkit-scrollbar { display: none; }
+        #reviewsCarousel { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <script src="js/load-partials.js"></script>
@@ -473,10 +494,77 @@
 </section>
 
 
-<section class="py-16 md:py-24 bg-[#0d152e] text-white">
+<section class="py-16 md:py-24 bg-[#0d152e] text-white" id="awardsSection">
     <div class="max-w-7xl mx-auto px-4 text-center">
         <div class="inline-block border border-gray-600 text-gray-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 bg-white/5">
             AWARD WINNING AGENCY
+        </div>
+        <h2 class="text-3xl md:text-5xl font-bold mb-4 serif text-yellow-500">Recognized Excellence<br>in Insurance</h2>
+        <p class="text-gray-300 mb-16 max-w-2xl mx-auto">
+            Our consistent growth and customer satisfaction have earned us accolades from leading industry publications and organizations.
+        </p>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="awardsGrid">
+            <!-- Award Placeholders -->
+            <div class="bg-white/5 border border-white/10 rounded-xl p-6 flex flex-col items-center justify-center h-48 hover:bg-white/10 transition">
+                <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center text-white text-2xl mb-4 shadow-lg">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h4 class="font-bold text-sm text-center">Inc. 5000</h4>
+                <p class="text-xs text-gray-400 mt-2 text-center">Fastest Growing Companies</p>
+            </div>
+            
+            <div class="bg-white/5 border border-white/10 rounded-xl p-6 flex flex-col items-center justify-center h-48 hover:bg-white/10 transition">
+                <div class="w-16 h-16 bg-gradient-to-br from-gray-300 to-gray-500 rounded-full flex items-center justify-center text-white text-2xl mb-4 shadow-lg">
+                    <i class="fas fa-medal"></i>
+                </div>
+                <h4 class="font-bold text-sm text-center">Top Insurance Agency</h4>
+                <p class="text-xs text-gray-400 mt-2 text-center">2023 Excellence Award</p>
+            </div>
+            
+            <div class="bg-white/5 border border-white/10 rounded-xl p-6 flex flex-col items-center justify-center h-48 hover:bg-white/10 transition">
+                <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl mb-4 shadow-lg">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h4 class="font-bold text-sm text-center">Best Places to Work</h4>
+                <p class="text-xs text-gray-400 mt-2 text-center">Tampa Bay Business Journal</p>
+            </div>
+            
+            <div class="bg-white/5 border border-white/10 rounded-xl p-6 flex flex-col items-center justify-center h-48 hover:bg-white/10 transition">
+                <div class="w-16 h-16 bg-gradient-to-br from-red-400 to-red-600 rounded-full flex items-center justify-center text-white text-2xl mb-4 shadow-lg">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4 class="font-bold text-sm text-center">Top Rated Local</h4>
+                <p class="text-xs text-gray-400 mt-2 text-center">5-Star Customer Satisfaction</p>
+            </div>
+            
+             <div class="bg-white/5 border border-white/10 rounded-xl p-6 flex flex-col items-center justify-center h-48 hover:bg-white/10 transition">
+                <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center text-white text-2xl mb-4 shadow-lg">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h4 class="font-bold text-sm text-center">Community Leader</h4>
+                <p class="text-xs text-gray-400 mt-2 text-center">Outstanding Contribution</p>
+            </div>
+             <div class="bg-white/5 border border-white/10 rounded-xl p-6 flex flex-col items-center justify-center h-48 hover:bg-white/10 transition">
+                <div class="w-16 h-16 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full flex items-center justify-center text-white text-2xl mb-4 shadow-lg">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h4 class="font-bold text-sm text-center">Customer Choice</h4>
+                <p class="text-xs text-gray-400 mt-2 text-center">Voted #1 by Floridians</p>
+            </div>
+            
+            <div class="bg-white/5 border border-white/10 rounded-xl p-6 flex flex-col items-center justify-center h-48 hover:bg-white/10 transition">
+                <div class="w-16 h-16 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full flex items-center justify-center text-white text-2xl mb-4 shadow-lg">
+                    <i class="fas fa-shield-check"></i>
+                </div>
+                <h4 class="font-bold text-sm text-center">Elite Agency</h4>
+                <p class="text-xs text-gray-400 mt-2 text-center">Carrier Recognition</p>
+            </div>
+        </div>
+        
+        <div class="mt-12 text-gray-400 text-sm">
+            "We are honored to be recognized for our commitment to excellence."
+        </div>
     </div>
 </section>
 
@@ -799,9 +887,9 @@
             Thousands of satisfied customers across Florida have made the switch. See why they consistently recommend us to family and friends.
         </p>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+        <div id="reviewsCarousel" class="flex gap-6 overflow-x-auto pb-4 scroll-smooth" style="scroll-behavior: smooth;">
             <!-- Review 1 -->
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+            <div class="min-w-[300px] md:min-w-[350px] bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
                 <div>
                     <div class="flex text-yellow-400 mb-4 text-sm">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -820,7 +908,7 @@
             </div>
             
             <!-- Review 2 -->
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+            <div class="min-w-[300px] md:min-w-[350px] bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
                 <div>
                     <div class="flex text-yellow-400 mb-4 text-sm">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -839,7 +927,7 @@
             </div>
             
             <!-- Review 3 -->
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+            <div class="min-w-[300px] md:min-w-[350px] bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
                 <div>
                     <div class="flex text-yellow-400 mb-4 text-sm">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -858,7 +946,7 @@
             </div>
             
             <!-- Review 4 -->
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+            <div class="min-w-[300px] md:min-w-[350px] bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
                 <div>
                     <div class="flex text-yellow-400 mb-4 text-sm">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -877,7 +965,7 @@
             </div>
             
             <!-- Review 5 -->
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+            <div class="min-w-[300px] md:min-w-[350px] bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
                 <div>
                     <div class="flex text-yellow-400 mb-4 text-sm">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -896,7 +984,7 @@
             </div>
             
             <!-- Review 6 -->
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+            <div class="min-w-[300px] md:min-w-[350px] bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
                 <div>
                     <div class="flex text-yellow-400 mb-4 text-sm">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -913,6 +1001,15 @@
                     </div>
                 </div>
             </div>
+        </div>
+        
+        <div class="flex justify-center gap-4 mt-8">
+            <button id="prevReview" class="w-12 h-12 rounded-full border-2 border-dark-blue text-dark-blue hover:bg-dark-blue hover:text-white transition flex items-center justify-center">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button id="nextReview" class="w-12 h-12 rounded-full border-2 border-dark-blue text-dark-blue hover:bg-dark-blue hover:text-white transition flex items-center justify-center">
+                <i class="fas fa-chevron-right"></i>
+            </button>
         </div>
         
         <div class="mt-10">
@@ -1105,6 +1202,51 @@ if (mobileMenuBtn && mobileMenu) {
             icon.className = 'fas fa-times';
         }
     });
+}
+
+// Reviews Carousel
+const reviewsCarousel = document.getElementById('reviewsCarousel');
+const prevReviewBtn = document.getElementById('prevReview');
+const nextReviewBtn = document.getElementById('nextReview');
+
+if (reviewsCarousel && prevReviewBtn && nextReviewBtn) {
+    const scrollAmount = 380;
+    
+    nextReviewBtn.addEventListener('click', () => {
+        reviewsCarousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+    
+    prevReviewBtn.addEventListener('click', () => {
+        reviewsCarousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+}
+
+// Awards Section Animation
+const awardsSection = document.getElementById('awardsSection');
+const awardsGrid = document.getElementById('awardsGrid');
+
+if (awardsSection && awardsGrid) {
+    awardsSection.classList.add('awards-animate');
+    const awardsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const items = awardsGrid.querySelectorAll('div');
+                items.forEach((item, index) => {
+                    item.style.animationDelay = `${index * 0.1}s`;
+                    item.classList.add('slide-in');
+                });
+            }
+        });
+    }, { threshold: 0.2 });
+    awardsObserver.observe(awardsSection);
+}
+    });
+}, { threshold: 0.2 });
+
+const awardsSection = document.querySelector('section:has(> div > div:contains("AWARD WINNING"))');
+if (awardsSection) {
+    awardsSection.classList.add('awards-animate');
+    awardsObserver.observe(awardsSection);
 }
 </script>
 
