@@ -1,5 +1,17 @@
 // Load partials (header/footer) into pages
 document.addEventListener('DOMContentLoaded', async () => {
+    // Load header
+    const headerContainer = document.getElementById('header-container');
+    if (headerContainer) {
+        try {
+            const response = await fetch('partials/header.html');
+            const headerHTML = await response.text();
+            headerContainer.innerHTML = headerHTML;
+        } catch (e) {
+            console.log('Header loaded inline');
+        }
+    }
+    
     // Load footer
     const footerContainer = document.getElementById('footer-container');
     if (footerContainer) {
