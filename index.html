@@ -1211,14 +1211,38 @@ const nextReviewBtn = document.getElementById('nextReview');
 
 if (reviewsCarousel && prevReviewBtn && nextReviewBtn) {
     const scrollAmount = 380;
+    let autoScrollInterval;
+    
+    function startAutoScroll() {
+        autoScrollInterval = setInterval(() => {
+            if (reviewsCarousel.scrollLeft + reviewsCarousel.clientWidth >= reviewsCarousel.scrollWidth) {
+                reviewsCarousel.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                reviewsCarousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }, 4000);
+    }
+    
+    function stopAutoScroll() {
+        clearInterval(autoScrollInterval);
+    }
+    
+    startAutoScroll();
     
     nextReviewBtn.addEventListener('click', () => {
+        stopAutoScroll();
         reviewsCarousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        startAutoScroll();
     });
     
     prevReviewBtn.addEventListener('click', () => {
+        stopAutoScroll();
         reviewsCarousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        startAutoScroll();
     });
+    
+    reviewsCarousel.addEventListener('mouseenter', stopAutoScroll);
+    reviewsCarousel.addEventListener('mouseleave', startAutoScroll);
 }
 
 // Awards Section Animation
