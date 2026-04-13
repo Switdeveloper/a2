@@ -1,0 +1,144 @@
+<header class="bg-white sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center h-20">
+            <a href="index.html" class="flex items-center space-x-3">
+                <div class="w-12 h-12 bg-primary-red rounded-lg flex items-center justify-center">
+                    <i class="fas fa-shield-alt text-white text-xl"></i>
+                </div>
+                <span class="text-xl font-bold text-dark-blue">Freedman<span class="text-primary-red">Broker</span>Insurance</span>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-6" id="desktopNav">
+                <a href="index.html" class="text-sm font-semibold text-gray-800 hover:text-primary-red">Home</a>
+                
+                <div class="relative group">
+                    <button class="text-sm font-semibold text-gray-800 hover:text-primary-red flex items-center gap-1">
+                        Insurance <i class="fas fa-chevron-down text-[10px] text-gray-400"></i>
+                    </button>
+                    <div class="absolute top-full left-0 mt-2 w-[600px] bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div class="grid grid-cols-2 gap-1 p-3">
+                            <div class="space-y-1">
+                                <div class="text-[10px] font-bold text-gray-400 uppercase tracking-wider px-3 py-2">Personal</div>
+                                <a href="auto-insurance.html" class="flex items-center px-3 py-2.5 rounded-lg hover:bg-gray-50 transition">
+                                    <i class="fas fa-car text-primary-red w-5 text-sm"></i>
+                                    <span class="text-sm font-semibold text-gray-800 ml-3">Auto Insurance</span>
+                                </a>
+                                <a href="home-insurance.html" class="flex items-center px-3 py-2.5 rounded-lg hover:bg-gray-50 transition">
+                                    <i class="fas fa-home text-primary-red w-5 text-sm"></i>
+                                    <span class="text-sm font-semibold text-gray-800 ml-3">Home Insurance</span>
+                                </a>
+                                <a href="life-insurance.html" class="flex items-center px-3 py-2.5 rounded-lg hover:bg-gray-50 transition">
+                                    <i class="fas fa-heart text-primary-red w-5 text-sm"></i>
+                                    <span class="text-sm font-semibold text-gray-800 ml-3">Life Insurance</span>
+                                </a>
+                                <a href="flood-insurance.html" class="flex items-center px-3 py-2.5 rounded-lg hover:bg-gray-50 transition">
+                                    <i class="fas fa-water text-primary-red w-5 text-sm"></i>
+                                    <span class="text-sm font-semibold text-gray-800 ml-3">Flood Insurance</span>
+                                </a>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="text-[10px] font-bold text-gray-400 uppercase tracking-wider px-3 py-2">Business</div>
+                                <a href="business-insurance.html" class="flex items-center px-3 py-2.5 rounded-lg hover:bg-gray-50 transition">
+                                    <i class="fas fa-briefcase text-primary-red w-5 text-sm"></i>
+                                    <span class="text-sm font-semibold text-gray-800 ml-3">Business Insurance</span>
+                                </a>
+                                <a href="commercial-insurance.html" class="flex items-center px-3 py-2.5 rounded-lg hover:bg-gray-50 transition">
+                                    <i class="fas fa-building text-primary-red w-5 text-sm"></i>
+                                    <span class="text-sm font-semibold text-gray-800 ml-3">Commercial Insurance</span>
+                                </a>
+                                <a href="performance-bonds.html" class="flex items-center px-3 py-2.5 rounded-lg hover:bg-gray-50 transition">
+                                    <i class="fas fa-file-contract text-primary-red w-5 text-sm"></i>
+                                    <span class="text-sm font-semibold text-gray-800 ml-3">Performance Bonds</span>
+                                </a>
+                                <a href="premium-financing.html" class="flex items-center px-3 py-2.5 rounded-lg hover:bg-gray-50 transition">
+                                    <i class="fas fa-credit-card text-primary-red w-5 text-sm"></i>
+                                    <span class="text-sm font-semibold text-gray-800 ml-3">Premium Financing</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="services.html" class="text-sm font-semibold text-gray-800 hover:text-primary-red">Services</a>
+                <a href="about.html" class="text-sm font-semibold text-gray-800 hover:text-primary-red">About Us</a>
+                <a href="locations.html" class="text-sm font-semibold text-gray-800 hover:text-primary-red">Locations</a>
+                <a href="faq.html" class="text-sm font-semibold text-gray-800 hover:text-primary-red">FAQ</a>
+                <a href="contact.html" class="text-sm font-semibold text-primary-red">Contact</a>
+            </nav>
+
+            <div class="hidden md:flex items-center space-x-6">
+                <div class="flex items-center text-sm font-bold text-dark-blue">
+                    <i class="fas fa-phone-alt text-primary-red mr-2"></i> 1-727-230-1000
+                </div>
+                <a href="contact.html" class="bg-primary-red text-white px-5 py-2.5 rounded font-bold text-sm hover:bg-red-800 transition">Get a Quote</a>
+            </div>
+
+            <button id="mobileMenuBtn" class="md:hidden text-gray-800 text-xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="mobileMenu" class="hidden bg-white border-t border-gray-100 shadow-lg md:hidden">
+        <div class="px-4 py-6 space-y-5">
+            <a href="index.html" class="block text-sm font-semibold text-gray-800 hover:text-primary-red">Home</a>
+            <a href="services.html" class="block text-sm font-semibold text-gray-800 hover:text-primary-red">Services</a>
+            
+            <div>
+                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-2">Personal Insurance</p>
+                <div class="space-y-3 pl-2">
+                    <a href="auto-insurance.html" class="flex items-center text-sm text-gray-700 hover:text-primary-red">
+                        <i class="fas fa-car text-primary-red w-5 text-xs"></i>
+                        <span class="ml-2">Auto Insurance</span>
+                    </a>
+                    <a href="home-insurance.html" class="flex items-center text-sm text-gray-700 hover:text-primary-red">
+                        <i class="fas fa-home text-primary-red w-5 text-xs"></i>
+                        <span class="ml-2">Home Insurance</span>
+                    </a>
+                    <a href="life-insurance.html" class="flex items-center text-sm text-gray-700 hover:text-primary-red">
+                        <i class="fas fa-heart text-primary-red w-5 text-xs"></i>
+                        <span class="ml-2">Life Insurance</span>
+                    </a>
+                    <a href="flood-insurance.html" class="flex items-center text-sm text-gray-700 hover:text-primary-red">
+                        <i class="fas fa-water text-primary-red w-5 text-xs"></i>
+                        <span class="ml-2">Flood Insurance</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div>
+                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-2">Business Insurance</p>
+                <div class="space-y-3 pl-2">
+                    <a href="business-insurance.html" class="flex items-center text-sm text-gray-700 hover:text-primary-red">
+                        <i class="fas fa-briefcase text-primary-red w-5 text-xs"></i>
+                        <span class="ml-2">Business Insurance</span>
+                    </a>
+                    <a href="commercial-insurance.html" class="flex items-center text-sm text-gray-700 hover:text-primary-red">
+                        <i class="fas fa-building text-primary-red w-5 text-xs"></i>
+                        <span class="ml-2">Commercial Insurance</span>
+                    </a>
+                    <a href="premium-financing.html" class="flex items-center text-sm text-gray-700 hover:text-primary-red">
+                        <i class="fas fa-credit-card text-primary-red w-5 text-xs"></i>
+                        <span class="ml-2">Premium Financing</span>
+                    </a>
+                    <a href="performance-bonds.html" class="flex items-center text-sm text-gray-700 hover:text-primary-red">
+                        <i class="fas fa-file-contract text-primary-red w-5 text-xs"></i>
+                        <span class="ml-2">Performance Bonds</span>
+                    </a>
+                </div>
+            </div>
+            
+            <a href="about.html" class="block text-sm font-semibold text-gray-800 hover:text-primary-red">About Us</a>
+            <a href="locations.html" class="block text-sm font-semibold text-gray-800 hover:text-primary-red">Locations</a>
+            <a href="faq.html" class="block text-sm font-semibold text-gray-800 hover:text-primary-red">FAQ</a>
+            <a href="contact.html" class="block text-sm font-semibold text-primary-red">Contact</a>
+            
+            <div class="pt-4 border-t border-gray-200">
+                <a href="tel:17272301000" class="flex items-center text-sm font-bold text-dark-blue mb-3">
+                    <i class="fas fa-phone-alt text-primary-red mr-2"></i> 1-727-230-1000
+                </a>
+                <a href="contact.html" class="block w-full text-center bg-primary-red text-white px-5 py-3 rounded font-bold text-sm">Get a Quote</a>
+            </div>
+        </div>
+    </div>
+</header>
