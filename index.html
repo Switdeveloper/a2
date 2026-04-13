@@ -1223,6 +1223,90 @@ if (mobileMenuBtn && mobileMenu) {
 }
 </script>
 
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <div class="inline-block border border-red-200 text-primary-red text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 bg-red-50">
+                    FAQ
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-dark-blue serif mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-600">Got questions? We've got answers. If you don't see your question here, feel free to <a href="contact.html" class="text-primary-red font-semibold hover:underline">contact us</a>.</p>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-btn w-full flex justify-between items-center p-5 bg-gray-50 font-bold text-gray-800 hover:bg-gray-100 transition">
+                        <span>How much can I save on insurance?</span>
+                        <i class="fas fa-plus text-primary-red"></i>
+                    </button>
+                    <div class="faq-content hidden p-5 bg-white text-gray-600 text-sm border-t border-gray-200">
+                        Most customers save $400-$1,200/year by switching to us. We compare 40+ carriers to find you the lowest rate.
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-btn w-full flex justify-between items-center p-5 bg-white font-bold text-gray-800 hover:bg-gray-50 transition">
+                        <span>How long does it take to get a quote?</span>
+                        <i class="fas fa-plus text-gray-400"></i>
+                    </button>
+                    <div class="faq-content hidden p-5 bg-white text-gray-600 text-sm border-t border-gray-200">
+                        Most quotes take just 5-10 minutes. You can get a quote online, over the phone, or visit one of our 100+ Florida locations.
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-btn w-full flex justify-between items-center p-5 bg-white font-bold text-gray-800 hover:bg-gray-50 transition">
+                        <span>Do you serve all of Florida?</span>
+                        <i class="fas fa-plus text-gray-400"></i>
+                    </button>
+                    <div class="faq-content hidden p-5 bg-white text-gray-600 text-sm border-t border-gray-200">
+                        Yes! We have 100+ locations across Florida - from Miami to Jacksonville. Our agents are licensed in all 67 counties.
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-btn w-full flex justify-between items-center p-5 bg-white font-bold text-gray-800 hover:bg-gray-50 transition">
+                        <span>What types of insurance do you offer?</span>
+                        <i class="fas fa-plus text-gray-400"></i>
+                    </button>
+                    <div class="faq-content hidden p-5 bg-white text-gray-600 text-sm border-t border-gray-200">
+                        We offer Auto, Home, Life, Business, Flood, Commercial, and more. One agency for all your insurance needs.
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-btn w-full flex justify-between items-center p-5 bg-white font-bold text-gray-800 hover:bg-gray-50 transition">
+                        <span>Can I bundle policies for discounts?</span>
+                        <i class="fas fa-plus text-gray-400"></i>
+                    </button>
+                    <div class="faq-content hidden p-5 bg-white text-gray-600 text-sm border-t border-gray-200">
+                        Absolutely! Bundle auto + home and save up to 15% on both. Most customers save $400+/year with multi-policy discounts.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="faq.html" class="text-primary-red font-semibold hover:underline">View all FAQs →</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                content.classList.toggle('hidden');
+                icon.classList.toggle('fa-plus');
+                icon.classList.toggle('fa-times');
+                icon.classList.toggle('text-primary-red');
+                icon.classList.toggle('text-gray-400');
+            });
+        });
+    </script>
+
     <div id="footer-container"></div>
 </body>
 </html>
